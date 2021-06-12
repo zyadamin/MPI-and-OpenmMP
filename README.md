@@ -1,4 +1,4 @@
-# MPI-and-OpenmMP-with-c
+# MPI-and-OpenmMP
 
 ## Counting Primes
 
