@@ -48,3 +48,12 @@ Write a parallel C program using OpenMP such tha:
 by ‘X’. A ‘O’ (or a set of ‘O’) is considered to be surrounded by ‘X’ if there are ‘X’ at
 locations just left and just right of it.
 O’s at the edges will not be replaced
+
+## Sum of Convergent Series
+
+Write c code to solve this problem using hybrid programming.
+
+![image](https://user-images.githubusercontent.com/66642836/121779766-36147800-cb52-11eb-8d47-c80ac3bd44e8.png)
+
+This problem from n = 1 to infinite will converge to 1 at the end try to reach this result
+and print the error value as your expected result = 1 ( error = expected - calculated)
