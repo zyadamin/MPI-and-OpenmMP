@@ -20,5 +20,22 @@ Slave Process:
 4. Print the partial count
 5. Send this partial count to the master process using the MPI_Send.
 
+## Calculating Standard Deviation
 
+to calculate standard deviation using MPI_Bcast, MPI_Reduce
+& MPI_Allreduce ONLY.
 
+Master Process:
+1. Read n from the user.
+2. Broadcast n to each slave process using MPI_Bcast.
+3. Calculate the square root of the mean of squared differences.
+
+Slave Process:
+1. Get n through the MPI_Bcast call.
+2. Generate n random elements. So each process will generate n numbers.
+3. Calculate local sum of the generated n elements.
+4. Share this local sum with the rest of the processes using MPI_Allreduce.
+5. Calculate the global mean. (Total sum of elements / n * numOfProcesses).
+6. Calculate local sum of squared differences from the mean. Sum (n - mean)2
+7. Share this local sum of squared differences with the master process using
+MPI_Reduce call.
